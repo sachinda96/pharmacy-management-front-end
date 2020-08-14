@@ -1,0 +1,72 @@
+
+<div >
+  <section class="content-header">
+    <h1>
+      Manage Customer
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Manage Customer</li>
+    </ol>
+  </section>
+  <div class="box-header with-border">
+    <h3 class="box-title"></h3>
+  </div>
+  <div class="box-body">
+    <form class="login-form" #frm="ngForm" (ngSubmit)="save()">
+    <div class="row">
+      <div class="col-xs-4">
+        <label>Full Name</label>
+        <input type="text" class="form-control" placeholder="full name" [(ngModel)]="customer.fullName" name="fullName">
+      </div>
+      <div class="col-xs-4">
+        <label>Nic Number</label>
+        <input type="text" class="form-control" placeholder="nic no." [(ngModel)]="customer.nicNo" name="nicNo">
+      </div>
+      <div class="col-xs-4">
+        <label>Mobile Number</label>
+        <input type="text" class="form-control" placeholder="mobile no." [(ngModel)]="customer.mobileNo" name="mobileNo">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-xs-6">
+        <label>Address</label>
+        <input type="text" class="form-control" placeholder="address" [(ngModel)]="customer.address" name="address">
+      </div>
+      <div class="col-xs-3">
+        <label>City</label>
+        <input type="text" class="form-control" placeholder="city" [(ngModel)]="customer.city" name="city">
+      </div>
+      <div class="col-xs-3">
+        <label>Postal Code</label>
+        <input type="text" class="form-control" placeholder="postal code" [(ngModel)]="customer.postalCode" name="postalCode">
+      </div>
+    </div>
+    </form>
+  </div>
+  <div class="box-body">
+    <div class="row">
+      <div class="col-xs-4">
+        <label>Email</label>
+        <input type="text" class="form-control" placeholder="Email" [(ngModel)]="customer.email" name="email">
+      </div>
+      <div class="col-xs-4">
+        <label>Occupation</label>
+        <input type="text" class="form-control" placeholder="occupation" [(ngModel)]="customer.occupation" name="occupation">
+      </div>
+      <div class="col-xs-4">
+        <label>Birthday</label>
+        <input type="date" class="form-control" placeholder="Birath Day" [(ngModel)]="customer.birthDay" name="birthDay">
+      </div>
+    </div>
+    <br>
+
+  </div>
+</div>
+<br><br>
+<div >
+  <button type="button" class="btn btn-default" style="margin-left: 5px;width: 100px">Cancel</button>
+  <button type="button" class="btn btn-info pull-right" style="margin-right: 5px;width: 100px" (click)="save()">Save</button>
+</div>

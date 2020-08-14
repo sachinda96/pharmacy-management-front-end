@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {LoginComponent} from './login/login.component';
-import {DashboardComponent} from './dashboard/dashboard.component';
-import {DashboardMainComponent} from './dashboard-main/dashboard-main.component';
+import {LoginComponent} from './view/login/login.component';
+import {DashboardComponent} from './view/dashboard/dashboard.component';
+import {DashboardMainComponent} from './view/dashboard-main/dashboard-main.component';
+import {NewCustomerComponent} from './view/new-customer/new-customer.component';
+import {AllCustomersComponent} from './view/all-customers/all-customers.component';
+import {ItemComponent} from './view/item/item.component';
+import {AllItemComponent} from './view/all-item/all-item.component';
 
 const routes: Routes = [
   {path : '', component: LoginComponent},
@@ -14,8 +18,21 @@ const routes: Routes = [
       pathMatch : 'full',
       redirectTo: '/dashboardmain'
     },
-    {path : 'dashboardmain' , component : DashboardMainComponent}
-  ]},
+    {
+      path: 'newcustomer',
+      pathMatch : 'full',
+      redirectTo: '/newcust'
+    },
+    {path : 'dashboardmain' , component : DashboardMainComponent},
+    {path : 'newcust' , component : NewCustomerComponent},
+    {path : 'newcust/:id' , component : NewCustomerComponent},
+    {path : 'allcustomer' , component : AllCustomersComponent},
+    {path : 'item' , component : ItemComponent},
+
+    {path : 'item/:id' , component : ItemComponent},
+
+    {path : 'allitem' , component : AllItemComponent}
+    ]},
 ];
 
 @NgModule({

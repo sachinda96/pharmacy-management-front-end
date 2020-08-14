@@ -1,0 +1,39 @@
+<div >
+  <section class="content-header">
+    <h1>
+      All Customers
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">All Customer</li>
+    </ol>
+  </section>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr >
+        <th>Customer Name</th>
+        <th>Nic Number</th>
+        <th>Email Address</th>
+        <th></th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of customerArray">
+        <td>{{data.fullName}}</td>
+        <td>{{data.nicNo}}
+        </td>
+        <td>{{data.email}}</td>
+        <td> <i class="fas fa-edit" style="color: chartreuse" (click)="edit(data.id)"></i></td>
+        <td><i class="fas fa-trash-alt" style="color:red;" (click)="delete(data.id)"></i></td>
+      </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+  <!-- /.box-body -->
+</div>

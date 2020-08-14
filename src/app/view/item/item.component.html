@@ -1,0 +1,62 @@
+
+<div >
+  <section class="content-header">
+    <h1>
+      Manage Item
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Manage Item</li>
+    </ol>
+  </section>
+  <div class="box-header with-border">
+    <h3 class="box-title"></h3>
+  </div>
+  <div class="box-body">
+    <form class="login-form" #frm="ngForm" (ngSubmit)="save()">
+      <div class="row">
+        <div class="col-xs-5">
+          <label>Name</label>
+          <input type="text" class="form-control" placeholder="name" [(ngModel)]="item.name" name="name">
+        </div>
+        <div class="col-xs-7">
+          <label>Description</label>
+          <input type="text" class="form-control" placeholder="description" [(ngModel)]="item.description" name="description">
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Type</label>
+          <input type="text" class="form-control" placeholder="type" [(ngModel)]="item.type" name="type">
+        </div>
+        <div class="col-xs-4">
+          <label>Expire Date</label>
+          <input type="date" class="form-control" placeholder="expDate" [(ngModel)]="item.expDate" name="expDate">
+        </div>
+        <div class="col-xs-4">
+          <label>Qty</label>
+          <input type="text" class="form-control" placeholder="qty" [(ngModel)]="item.qty" name="qty">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="box-body">
+    <div class="row">
+      <div class="col-xs-4">
+        <label>Price</label>
+        <input type="number" class="form-control" placeholder="price" [(ngModel)]="item.price" name="price">
+      </div>
+
+    </div>
+    <br>
+
+  </div>
+</div>
+<br><br>
+<div >
+  <button type="button" class="btn btn-default" style="margin-left: 5px;width: 100px">Cancel</button>
+  <button type="button" class="btn btn-info pull-right" style="margin-right: 5px;width: 100px" (click)="save()">Save</button>
+</div>
