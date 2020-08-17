@@ -1,0 +1,108 @@
+
+<div >
+  <section class="content-header">
+    <h1>
+      Place Order
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">place order</li>
+    </ol>
+  </section>
+  <div class="box-header with-border">
+    <h3 class="box-title"></h3>
+  </div>
+  <div class="box-body">
+    <form class="login-form" #frm="ngForm" (ngSubmit)="save()">
+      <h4>Customer Details</h4>
+      <hr style="height:1px;border-top:1px solid #f00">
+      <div class="row">
+        <div class="col-md-3">
+          <label style="margin-top: 5px">Customer Type</label>
+          <select  #cusSelect style="width: 250px;height: 30px" class="selectpicker"  (change)="setCustomerData(cusSelect.value)">
+            <option value="NEW">New Customer</option>
+            <option value="OLD">Old Customer</option>
+          </select>
+        </div>
+        <div *ngIf="isOldCus" class="col-md-4">
+          <label style="margin-top: 5px">Customer Name</label>
+          <br>
+          <select  #cusSelect style="width: 350px;height: 30px" class="selectpicker"  (change)="setCustomer(cusSelect.value)">
+            <option *ngFor="let data of customerArray" value="{{data.id}}">{{data.fullName}}</option>
+          </select>
+        </div>
+        <div *ngIf="isNewCus" class="col-xs-7">
+          <label>Customer Name</label>
+          <input type="text"  class="form-control" placeholder="customer name" name="customerName" id="customerName" >
+        </div>
+        <div *ngIf="isOldCus == true" class="col-xs-5">
+          <label>Customer Nic</label>
+          <input type="text" class="form-control" placeholder="customer nic" [(ngModel)]="customer.nicNo" name="nicNo" disabled>
+        </div>
+      </div>
+      <br>
+      <h4>Item Details</h4>
+      <hr style="height:1px;border-top:1px solid #f00">
+      <div class="row">
+        <div class="col-md-5">
+            <label style="margin-top: 5px">Item Name</label>
+            <select #itmSelect style="width: 420px;height: 30px" class="selectpicker"  (change)="setItemData(itmSelect.value)">
+              <option *ngFor="let data of itemArray" value="{{data.id}}">{{data.name}}</option>
+            </select>
+          </div>
+        <div class="col-xs-7">
+
+          <label>Description</label>
+          <input type="text" class="form-control" placeholder="description" [(ngModel)]="item.description"   name="description" disabled>
+
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Price</label>
+          <input type="text" class="form-control" placeholder="price" [(ngModel)]="item.price" name="price" disabled>
+        </div>
+        <div class="col-xs-4">
+          <label>Qty</label>
+          <input type="text" class="form-control" placeholder="Qty"[(ngModel)]="item.qty"  name="qty">
+        </div>
+        <div class="col-xs-4">
+          <button type="button" class="btn btn-info" style="margin-right: 5px;margin-top:21px;width: 100px" (click)="add()">Add</button>
+
+        </div>
+      </div>
+
+    </form>
+  </div>
+  <div class="box-body">
+    <table id="example1" class="table table-bordered table-striped">
+      <thead>
+      <tr >
+        <th>Customer Name</th>
+        <th>Item Name</th>
+        <th>Qty</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let data of orderArray">
+        <td>{{data.customerName}}</td>
+        <td>{{data.itemName}}</td>
+        <td>{{data.qty}}</td>
+        <td><i class="fas fa-trash-alt" style="color:red;" (click)="removeItem(data)"></i></td>
+      </tr>
+      </tbody>
+
+    </table>
+
+    <h3 style="float: right;margin-right: 10px">Total Price : {{total}}</h3>
+
+  </div>
+</div>
+<br><br>
+<div >
+  <button type="button" class="btn btn-default" style="margin-left: 5px;width: 100px">Cancel</button>
+  <button type="button" class="btn btn-info pull-right" style="margin-right: 10px;width: 100px" (click)="save()">Place Order</button>
+</div>

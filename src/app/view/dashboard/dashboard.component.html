@@ -76,7 +76,7 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview menu-open">
-          <a routerLink="main">
+          <a routerLink="dashboardmain">
             <i class="fas fa-tachometer-alt" ></i> &nbsp;<span>Dashboard</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -93,7 +93,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a  >&nbsp;&nbsp;<i class="fas fa-cart-plus"></i> &nbsp;New Order</a></li>
+            <li class="active"><a routerLink="order" >&nbsp;&nbsp;<i class="fas fa-cart-plus"></i> &nbsp;New Order</a></li>
             <li><a href="pages/charts/morris.html">&nbsp;&nbsp;<i class="fas fa-luggage-cart"></i>&nbsp; All Orders</a></li>
             <li><a href="pages/charts/flot.html">&nbsp;&nbsp;<i class="fas fa-chart-line"></i> &nbsp; Order Report</a></li>
           </ul>
@@ -109,6 +109,7 @@
           <ul class="treeview-menu">
             <li><a routerLink="newcust">&nbsp;&nbsp;<i class="fas fa-user-plus"></i>&nbsp;  New Customer </a></li>
             <li><a routerLink="allcustomer">&nbsp;&nbsp;<i class="fas fa-users"></i>&nbsp;  All Customers</a></li>
+            <li><a routerLink="customerReport">&nbsp;&nbsp;<i class="fas fa-user-secret"></i>&nbsp;  Customers Report</a></li>
           </ul>
         </li>
         <li class="active treeview menu-open">
@@ -122,17 +123,12 @@
             <li><a routerLink="item">&nbsp;&nbsp;<i class="fas fa-prescription-bottle-alt"></i>&nbsp;  New Items</a></li>
 
             <li><a routerLink="allitem">&nbsp;&nbsp;<i class="fas fa-prescription-bottle"></i>&nbsp;  All Items</a></li>
+
+
+            <li><a routerLink="itemReport">&nbsp;&nbsp;<i class="fas fa-hospital-o"></i>&nbsp; Items Report</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Reports</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
 
-        </li>
         <li class="treeview">
           <a href="#">
             <i class="fas fa-sign-out-alt"></i> &nbsp;<span>Sign Out</span>

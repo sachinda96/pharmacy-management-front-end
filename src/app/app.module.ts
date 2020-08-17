@@ -14,6 +14,12 @@ import {CustomerService} from './service/customer.service';
 import { ItemComponent } from './view/item/item.component';
 import { AllItemComponent } from './view/all-item/all-item.component';
 import {ItemService} from './service/item.service';
+import { NewOrderComponent } from './view/new-order/new-order.component';
+import {OrderService} from './service/order.service';
+import { ItemReportComponent } from './view/item-report/item-report.component';
+import {ReportService} from './service/report.service';
+import { CustomerReportComponent } from './view/customer-report/customer-report.component';
+import {DashboardService} from './service/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +30,10 @@ import {ItemService} from './service/item.service';
     NewCustomerComponent,
     AllCustomersComponent,
     ItemComponent,
-    AllItemComponent
+    AllItemComponent,
+    NewOrderComponent,
+    ItemReportComponent,
+    CustomerReportComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +41,7 @@ import {ItemService} from './service/item.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CustomerService,ItemService],
+  providers: [CustomerService,ItemService,OrderService,ReportService,DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

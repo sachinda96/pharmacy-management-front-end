@@ -7,6 +7,9 @@ import {NewCustomerComponent} from './view/new-customer/new-customer.component';
 import {AllCustomersComponent} from './view/all-customers/all-customers.component';
 import {ItemComponent} from './view/item/item.component';
 import {AllItemComponent} from './view/all-item/all-item.component';
+import {NewOrderComponent} from './view/new-order/new-order.component';
+import {ItemReportComponent} from './view/item-report/item-report.component';
+import {CustomerReportComponent} from './view/customer-report/customer-report.component';
 
 const routes: Routes = [
   {path : '', component: LoginComponent},
@@ -28,10 +31,11 @@ const routes: Routes = [
     {path : 'newcust/:id' , component : NewCustomerComponent},
     {path : 'allcustomer' , component : AllCustomersComponent},
     {path : 'item' , component : ItemComponent},
-
     {path : 'item/:id' , component : ItemComponent},
-
-    {path : 'allitem' , component : AllItemComponent}
+    {path : 'allitem' , component : AllItemComponent},
+    {path : 'order' , component : NewOrderComponent},
+    {path : 'itemReport' , component : ItemReportComponent},
+    {path : 'customerReport' , component : CustomerReportComponent},
     ]},
 ];
 
