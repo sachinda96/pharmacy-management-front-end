@@ -15,4 +15,8 @@ export class OrderService {
     return this.http.post<any>(mainUrl + url, orderList);
 
   }
+
+  getAllOrders(){
+    return this.http.get<any>(mainUrl+url);
+  }
 }

@@ -1,0 +1,66 @@
+
+<div >
+  <section class="content-header">
+    <h1>
+      Manage User
+      <small></small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Manage User</li>
+    </ol>
+  </section>
+  <div class="box-header with-border">
+    <h3 class="box-title"></h3>
+  </div>
+  <div class="box-body">
+    <form class="login-form" #frm="ngForm" (ngSubmit)="save()">
+      <div class="row">
+        <div class="col-xs-4">
+          <label>Full Name</label>
+          <input type="text" class="form-control" placeholder="full name" [(ngModel)]="user.name" name="name">
+        </div>
+        <div class="col-xs-4">
+          <label>Nic Number</label>
+          <input type="text" class="form-control" placeholder="nic no." [(ngModel)]="user.nicNo" name="nicNo">
+        </div>
+        <div class="col-xs-4">
+          <label>Mobile Number</label>
+          <input type="text" class="form-control" placeholder="mobile no." [(ngModel)]="user.mobileNo" name="mobileNo">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-xs-6">
+          <label>Address</label>
+          <input type="text" class="form-control" placeholder="address" [(ngModel)]="user.address" name="address">
+        </div>
+        <div class="col-xs-6">
+          <label>Role</label>
+          <input type="text" class="form-control" placeholder="role" [(ngModel)]="user.role" name="role">
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="box-body">
+    <div class="row">
+      <div class="col-xs-4">
+        <label>User Name</label>
+        <input type="text" class="form-control" placeholder="User Name" [(ngModel)]="user.userName" name="userName">
+      </div>
+      <div class="col-xs-4">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" name="password">
+      </div>
+
+    </div>
+    <br>
+
+  </div>
+</div>
+<br><br>
+<div >
+  <button type="button" class="btn btn-default" style="margin-left: 5px;width: 100px">Cancel</button>
+  <button type="button" class="btn btn-info pull-right" style="margin-right: 5px;width: 100px" (click)="save()">Save</button>
+</div>

@@ -10,10 +10,18 @@ import {AllItemComponent} from './view/all-item/all-item.component';
 import {NewOrderComponent} from './view/new-order/new-order.component';
 import {ItemReportComponent} from './view/item-report/item-report.component';
 import {CustomerReportComponent} from './view/customer-report/customer-report.component';
+import {AllOrdersComponent} from './view/all-orders/all-orders.component';
+import {OrderReportComponent} from './view/order-report/order-report.component';
+import {NewUserComponent} from './view/new-user/new-user.component';
+import {AllUserComponent} from './view/all-user/all-user.component';
+import {AuthGuard} from './service/AuthGuard';
 
 const routes: Routes = [
   {path : '', component: LoginComponent},
-  {path : 'dashboard', component: DashboardComponent,
+  {path : 'dashboard',
+
+    canActivate: [AuthGuard],
+    component: DashboardComponent,
   children:[
     { path: '', redirectTo: 'dashboardmain', pathMatch: 'full' },
     {
@@ -36,6 +44,10 @@ const routes: Routes = [
     {path : 'order' , component : NewOrderComponent},
     {path : 'itemReport' , component : ItemReportComponent},
     {path : 'customerReport' , component : CustomerReportComponent},
+    {path : 'allOrders' , component : AllOrdersComponent},
+    {path : 'orderReport' , component : OrderReportComponent},
+    {path : 'newuser' , component : NewUserComponent},
+    {path : 'alluser' , component : AllUserComponent}
     ]},
 ];
 

@@ -20,6 +20,13 @@ import { ItemReportComponent } from './view/item-report/item-report.component';
 import {ReportService} from './service/report.service';
 import { CustomerReportComponent } from './view/customer-report/customer-report.component';
 import {DashboardService} from './service/dashboard.service';
+import { AllOrdersComponent } from './view/all-orders/all-orders.component';
+import { OrderReportComponent } from './view/order-report/order-report.component';
+import {AuthService} from './service/auth.service';
+import { NewUserComponent } from './view/new-user/new-user.component';
+import { AllUserComponent } from './view/all-user/all-user.component';
+import {UserService} from './service/user.service';
+import {AuthGuard} from './service/AuthGuard';
 
 @NgModule({
   declarations: [
@@ -33,7 +40,11 @@ import {DashboardService} from './service/dashboard.service';
     AllItemComponent,
     NewOrderComponent,
     ItemReportComponent,
-    CustomerReportComponent
+    CustomerReportComponent,
+    AllOrdersComponent,
+    OrderReportComponent,
+    NewUserComponent,
+    AllUserComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +52,7 @@ import {DashboardService} from './service/dashboard.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CustomerService,ItemService,OrderService,ReportService,DashboardService],
+  providers: [CustomerService,ItemService,OrderService,ReportService,DashboardService,AuthService,UserService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

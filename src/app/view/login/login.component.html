@@ -11,12 +11,12 @@
 <br>
     <form action="../../index2.html" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="text" class="form-control" [(ngModel)]="loginData.userName" name="userName" placeholder="User Name">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <br>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" [(ngModel)]="loginData.password" name="password" placeholder="Password">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <br>
