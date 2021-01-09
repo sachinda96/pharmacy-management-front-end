@@ -15,6 +15,9 @@ import {OrderReportComponent} from './view/order-report/order-report.component';
 import {NewUserComponent} from './view/new-user/new-user.component';
 import {AllUserComponent} from './view/all-user/all-user.component';
 import {AuthGuard} from './service/AuthGuard';
+import {NewSupplierComponent} from "./view/new-supplier/new-supplier.component";
+import {AllSupplierComponent} from "./view/all-supplier/all-supplier.component";
+import {SupplierOrderComponent} from "./view/supplier-order/supplier-order.component";
 
 const routes: Routes = [
   {path : '', component: LoginComponent},
@@ -47,7 +50,11 @@ const routes: Routes = [
     {path : 'allOrders' , component : AllOrdersComponent},
     {path : 'orderReport' , component : OrderReportComponent},
     {path : 'newuser' , component : NewUserComponent},
-    {path : 'alluser' , component : AllUserComponent}
+    {path : 'alluser' , component : AllUserComponent},
+    {path : 'newsupplier' , component : NewSupplierComponent},
+    {path : 'allsupplier' , component : AllSupplierComponent},
+    {path : 'supplierorder' , component : SupplierOrderComponent},
+    {path : 'newsupplier/:id' , component : NewSupplierComponent}
     ]},
 ];
 

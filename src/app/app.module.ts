@@ -27,6 +27,10 @@ import { NewUserComponent } from './view/new-user/new-user.component';
 import { AllUserComponent } from './view/all-user/all-user.component';
 import {UserService} from './service/user.service';
 import {AuthGuard} from './service/AuthGuard';
+import { NewSupplierComponent } from './view/new-supplier/new-supplier.component';
+import { AllSupplierComponent } from './view/all-supplier/all-supplier.component';
+import {SupplierService} from "./service/supplier.service";
+import { SupplierOrderComponent } from './view/supplier-order/supplier-order.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,10 @@ import {AuthGuard} from './service/AuthGuard';
     AllOrdersComponent,
     OrderReportComponent,
     NewUserComponent,
-    AllUserComponent
+    AllUserComponent,
+    NewSupplierComponent,
+    AllSupplierComponent,
+    SupplierOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,7 @@ import {AuthGuard} from './service/AuthGuard';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CustomerService,ItemService,OrderService,ReportService,DashboardService,AuthService,UserService,AuthGuard],
+  providers: [CustomerService,ItemService,OrderService,ReportService,DashboardService,AuthService,UserService,AuthGuard,SupplierService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
